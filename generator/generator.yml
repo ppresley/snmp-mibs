@@ -1,0 +1,169 @@
+auths:
+  barracuda_v2:
+    community: Thuraya123
+    version: 2
+  obs_v2:
+    community: obs
+    version: 2
+  public_v2:
+    community: public
+    version: 2
+  public_v3:
+    security_level: authPriv
+    username: grafana
+    auth_protocol: SHA
+    password: Thuraya123
+    priv_protocol: AES
+    priv_password: Thuraya123
+    version: 3
+  barracuda_v3:
+    security_level: authPriv
+    username: grafana
+    auth_protocol: SHA
+    password: Thuraya@12345
+    priv_protocol: AES
+    priv_password: Thuraya@12345
+    version: 3
+modules:
+  # Default IF-MIB interfaces table with ifIndex.
+  if_mib:
+    walk:
+     - sysUpTime
+     - sysLocation
+     - sysName
+     - sysDescr
+     - sysServices
+     - ifName
+     - interfaces
+     - ifXTable
+     - ifHCInOctets
+     - ifHCOutOctets
+     - ifInErrors
+     - ifOutErrors
+     - entPhysicalEntry
+     - ipNetToMediaPhysAddress
+    lookups:
+      - source_indexes: [ifIndex]
+        lookup: ifAlias
+      - source_indexes: [ifIndex]
+        # Uis OID to avoid conflict with PaloAlto PAN-COMMON-MIB.
+        lookup: 1.3.6.1.2.1.2.2.1.2 # ifDescr
+      - source_indexes: [ifIndex]
+        # Use OID to avoid conflict with Netscaler NS-ROOT-MIB.
+        lookup: 1.3.6.1.2.1.31.1.1.1.1 # ifName
+    overrides:
+      ifAlias:
+        ignore: true # Lookup metric
+      ifDescr:
+        ignore: true # Lookup metric
+      ifName:
+        ignore: true # Lookup metric
+      ifType:
+        type: EnumAsInfo
+
+  # Fortigate MIBs
+  fnFortiGateMib:
+    walk:
+    - fgSystemInfo
+    - fgMgmt
+    - fgAppWanOpt
+    - fgDevice
+    - fgHwSensors
+    - fgVpnInfo
+    - fgVpnTunEntry
+
+  # Barracuda MIBS
+  blb:
+    walk:
+    - clusterStatus
+    - systemLoad
+    - cpuTemperature
+    - rdpUserSessions
+    - serviceBandwidth
+    - l7FTPSessions
+    - l7TCPConnections
+    - blbExt
+
+  # Nutanix MIBS
+  nutanix:
+    walk:
+    - clusterName
+    - clusterVersion
+    - clusterStatus
+    - clusterTotalStorageCapacity
+    - clusterUsedStorageCapacity
+    - clusterLatency
+    - clusterIOBandwidth
+    - controllerStatusTable
+    - vmInformationTable
+    - hypervisorInformationTable
+    - diskStatusTable
+    - serviceStatusTable
+    - softwareVersionTable
+    - ntxAlert
+    - storagePoolInformationTable
+
+  # Cisco MIBS
+  cisco:
+    walk:
+    - ciscoMemoryPoolTable
+    - lcpu
+    - ciscoEnvMonTemperatureStatusEntry
+    - ciscoEnvMonFanStatusEntry
+    - ciscoEnvMonSupplyStatusEntry
+    - ciscoEnvMonMIBNotificationEnables
+
+  # Cisco Nexus MIBS
+  cisco_nexus:
+    walk:
+    - cpmCPUTotalEntry
+    - cefcFanTrayStatusEntry
+    - cefcFRUPowerStatusEntry
+    - dot3StatsEntry
+    - entSensorValueEntry
+
+  # Juniper MIBS
+  juniper:
+    walk:
+    - jnxBoxDescr
+    - jnxBoxSerialNo
+    - jnxCraftAlarms
+    - jnxBoxInstalled
+    - jnxLEDEntry
+    - jnxOperatingEntry
+
+  # Aruba MIBS
+  aruba:
+    walk:
+    - wlsxWlanAccessPointInfoGroup
+    - wlsxWlanStationInfoGroup
+    - wlsxWlanAPStatsTable
+  
+  # Aruba MIBS
+  cppm:
+    walk:
+    - cppmSystemTableEntry 
+
+  # Extreme MIBS
+  ExtremeXOS:
+    walk:
+    - extremeSystemCommon
+    - extremeFanStatusEntry
+    - extremePowerSupplyEntry
+    - extremeCpuAggregateUtilization
+    - extremeCpuTask2Entry
+
+  # HPE MIBS
+  HPE:
+    walk:
+    - hh3cEntityExtStateEntry
+
+  # Aruba ClearPass MIBS
+  aruba_cppm:
+    walk:
+    - policyServerTableEntry
+
+  # A10 MIBS
+  a10:
+    walk:
+    - axSystem

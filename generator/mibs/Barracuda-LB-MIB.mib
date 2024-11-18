@@ -1,0 +1,314 @@
+Barracuda-LB DEFINITIONS ::=BEGIN
+
+    IMPORTS
+        MODULE-IDENTITY, OBJECT-TYPE, Integer32, NOTIFICATION-TYPE
+            FROM SNMPv2-SMI
+        barracuda
+            FROM Barracuda-REF;
+
+    blb MODULE-IDENTITY 
+        LAST-UPDATED "201308050000Z"
+        ORGANIZATION "Barracuda Networks, Inc."
+        CONTACT-INFO
+            "
+            Barracuda Networks Inc.
+            3175 S. Winchester Blvd.
+            Campbell, CA 95008
+            "
+        DESCRIPTION
+            "
+            Barracuda Load Balancer MIB.
+            Provides:
+              Objects:
+                * 1.3.6.1.4.1.20632.5.2  -- systemActiveServices -- deprecated
+                * 1.3.6.1.4.1.20632.5.3  -- systemOperatingServers -- deprecated
+                * 1.3.6.1.4.1.20632.5.6  -- l4TCPConnections -- current
+                * 1.3.6.1.4.1.20632.5.7  -- l7HTTPRequests -- current
+                * 1.3.6.1.4.1.20632.5.8  -- rdpUserSessions -- current
+                * 1.3.6.1.4.1.20632.5.9  -- serviceBandwidth -- current
+                * 1.3.6.1.4.1.20632.5.10 -- totalBandwidthToLB -- current
+                * 1.3.6.1.4.1.20632.5.11 -- realServerBandwidth -- current
+                * 1.3.6.1.4.1.20632.5.12 -- clusterStatus -- deprecated
+                * 1.3.6.1.4.1.20632.5.13 -- systemLoad -- deprecated
+                * 1.3.6.1.4.1.20632.5.14 -- cpuTemperature -- deprecated
+                * 1.3.6.1.4.1.20632.5.15 -- firmwareStorage -- deprecated
+                * 1.3.6.1.4.1.20632.5.16 -- mailLogStorage -- deprecated
+                * 1.3.6.1.4.1.20632.5.17 -- operationMode -- deprecated
+                * 1.3.6.1.4.1.20632.5.19 -- l7FTPSessions -- current
+                * 1.3.6.1.4.1.20632.5.20 -- l7TCPConnections -- current
+		* 1.3.6.1.4.1.20632.5.21 -- realServerOperationStatus -- current
+              Traps:
+                * 1.3.6.1.4.1.20632.5.1.2  -- cpuFanDead
+                * 1.3.6.1.4.1.20632.5.1.3  -- sysFanDead
+                * 1.3.6.1.4.1.20632.5.1.4  -- cpuTempHigh
+                * 1.3.6.1.4.1.20632.5.1.5  -- firmwareStorageHigh
+                * 1.3.6.1.4.1.20632.5.1.6  -- logsStorageHigh
+                * 1.3.6.1.4.1.20632.5.1.7  -- serviceUp
+                * 1.3.6.1.4.1.20632.5.1.8  -- serviceDown
+                * 1.3.6.1.4.1.20632.5.1.9  -- serverUp
+                * 1.3.6.1.4.1.20632.5.1.10 -- serverDown
+                * 1.3.6.1.4.1.20632.5.1.11 -- openConnsLimitReached
+                * 1.3.6.1.4.1.20632.5.1.12 -- cpsLimitReached
+                * 1.3.6.1.4.1.20632.5.1.13 -- sslTPSLimitReached
+                * 1.3.6.1.4.1.20632.5.1.14 -- highAvailabilityStatus
+                * 1.3.6.1.4.1.20632.5.1.15 -- cpuTempCritical
+                * 1.3.6.1.4.1.20632.5.1.16 -- minServerThresholdReached
+            "
+        REVISION     "201308050000Z" -- August 05, 2013
+        DESCRIPTION  "modified object names" 
+        ::= { barracuda 5 }
+
+    systemActiveServices OBJECT-TYPE
+         SYNTAX      Integer32
+         MAX-ACCESS  read-only
+         STATUS      deprecated
+         DESCRIPTION
+                     "The Barracuda Load Balancer's active services."
+         ::= { blb 2 }
+
+    systemOperatingServers OBJECT-TYPE
+         SYNTAX      Integer32
+         MAX-ACCESS  read-only
+        STATUS      deprecated
+         DESCRIPTION
+                     "The Barracuda Load Balancer's operating servers."
+         ::= { blb 3 }
+
+
+    l4TCPConnections  OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "The Barracuda Load Balancer's L4 TCP connections."
+         ::= { blb 6 }
+
+    l7HTTPRequests  OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Number of HTTP requests to L7 services."
+         ::= { blb 7 }
+
+    rdpUserSessions  OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Number of user sessions to RDP services."
+         ::= { blb 8 }
+
+    serviceBandwidth OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Current bandwith to each service."
+         ::= { blb 9 }
+
+
+    totalBandwidthToLB  OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Total bandwidth seen by this LB."
+         ::= { blb 10 }
+
+    realServerBandwidth OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Current bandwith to each real server."
+         ::= { blb 11 }
+
+    clusterStatus    OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      deprecated
+         DESCRIPTION
+                     "Indicates if the LB is standalone or in a cluster."
+         ::= { blb 12 }
+
+    systemLoad       OBJECT-TYPE
+         SYNTAX      Integer32
+         MAX-ACCESS  read-only
+         STATUS      deprecated
+         DESCRIPTION
+                     "Indicates the system load, in %tage."
+         ::= { blb 13 }
+
+
+    cpuTemperature   OBJECT-TYPE
+         SYNTAX      Integer32
+         MAX-ACCESS  read-only
+         STATUS      deprecated
+         DESCRIPTION
+                     "Indicates the CPU temperature in degree-celcius."
+         ::= { blb 14 }
+
+    firmwareStorage  OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      deprecated
+         DESCRIPTION
+                     "Indicates the space occupied by firmware, in %tage."
+         ::= { blb 15 }
+
+
+    mailLogStorage      OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      deprecated
+         DESCRIPTION
+                     "Indicates current space utilization of mail/log."
+         ::= { blb 16 }
+
+    operationMode    OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      deprecated
+         DESCRIPTION
+                     "Indicates the operating mode of LB(route-path/bridge mode)."
+         ::= { blb 17 }
+
+    l7FTPSessions  OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Number of FTP sessions."
+         ::= { blb 19 }
+
+    l7TCPConnections OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Number of TCP connections to L7 services."
+         ::= { blb 20 }
+
+    realServerOperationStatus OBJECT-TYPE
+         SYNTAX      OCTET STRING
+         MAX-ACCESS  read-only
+         STATUS      current
+         DESCRIPTION
+                     "Operation Status of real servers:
+		     (enabled/disabled/maintenance)
+                     format: service_name:real_server_ip=status"
+         ::= { blb 21 }
+--
+--
+-- Traps
+--
+
+blbtraps OBJECT IDENTIFIER ::= { blb 1 }
+
+    cpuFanDead NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      One of the CPU fans is dead."
+         ::= { blbtraps 2 }
+
+    sysFanDead NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      One of the System fans is dead."
+         ::= { blbtraps 3 }
+
+    cpuTempHigh NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      CPU temperature is higher than 70C."
+         ::= { blbtraps 4 }
+
+    firmwareStorageHigh NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      Firmware storage exceeds 90%."
+         ::= { blbtraps 5 }
+
+    logsStorageHigh NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      Logs storage exceeds 85%."
+         ::= { blbtraps 6 }
+
+    serviceUp NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Information
+                      Service is up."
+         ::= { blbtraps 7 }
+
+    serviceDown NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      Service is down."
+         ::= { blbtraps 8 }
+    
+    serverUp NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Information
+                      Back-end Server is up."
+         ::= { blbtraps 9 }
+
+    serverDown NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      Back-end Server is down."
+         ::= { blbtraps 10 }
+
+    openConnsLimitReached NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      Open Connections limit reached."
+         ::= { blbtraps 11 }
+
+    cpsLimitReached NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      Connections Per Second limit reached."
+         ::= { blbtraps 12 }
+
+    sslTPSLimitReached NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      SSL tps limit reached."
+         ::= { blbtraps 13 }
+
+    highAvailabilityStatus NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Information
+                      High Availability Status Changed."
+         ::= { blbtraps 14 }
+    
+    cpuTempCritical NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      CPU temperature is higher than 80C."
+         ::= { blbtraps 15 }
+    
+    minServerThresholdReached NOTIFICATION-TYPE
+         STATUS      deprecated
+         DESCRIPTION
+                     "Severity: Alert
+                      Number of functioning Real Servers drops below Minimum Real Servers."
+         ::= { blbtraps 16 }
+ 
+END
