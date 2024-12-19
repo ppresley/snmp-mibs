@@ -5,6 +5,9 @@ auths:
   obs_v2:
     community: obs
     version: 2
+  public_v1:
+    community: public
+    version: 1
   public_v2:
     community: public
     version: 2
@@ -64,6 +67,9 @@ modules:
   # Fortigate MIBs
   fnFortiGateMib:
     walk:
+    - fgVirtualDomain
+    - fgFwUserEntry
+    - fgAdminEntry
     - fgSystemInfo
     - fgMgmt
     - fgAppWanOpt
@@ -167,3 +173,15 @@ modules:
   a10:
     walk:
     - axSystem
+
+  # Brocade MIBS
+  brocade:
+    walk:
+    - swSystem
+    - swFCPortEntry
+    - swEventEntry
+    - swSensorEntry
+    - swCpuOrMemoryUsage
+    - swConnUnitTxBufferUnavailable
+    - ifInErrors
+    - ifOutErrors
