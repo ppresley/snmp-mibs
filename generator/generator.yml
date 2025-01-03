@@ -179,9 +179,10 @@ modules:
     walk:
     - swSystem
     - swFCPortEntry
-    - swEventEntry
     - swSensorEntry
     - swCpuOrMemoryUsage
-    - swConnUnitTxBufferUnavailable
+    - sysName
+    - ifHCInOctets
+    - ifHCOutOctets
     - ifInErrors
     - ifOutErrors
