@@ -182,6 +182,7 @@ modules:
     - swSensorEntry
     - swCpuOrMemoryUsage
     - sysName
+    - sysUpTime
     - ifHCInOctets
     - ifHCOutOctets
     - ifInErrors
