@@ -77,6 +77,7 @@ modules:
     - fgHwSensors
     - fgVpnInfo
     - fgVpnTunEntry
+    - fgFmTrapConfChange
 
   # Barracuda MIBS
   blb:
@@ -139,6 +140,7 @@ modules:
     - jnxBoxInstalled
     - jnxLEDEntry
     - jnxOperatingEntry
+    - jnxCmCfgChgLatestTime
 
   # Aruba MIBS
   aruba:
@@ -160,6 +162,7 @@ modules:
     - extremePowerSupplyEntry
     - extremeCpuAggregateUtilization
     - extremeCpuTask2Entry
+    - extremeLastSaveConfigTime
 
   # HPE MIBS
   HPE:

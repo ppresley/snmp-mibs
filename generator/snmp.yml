@@ -46,6 +46,7 @@ modules:
   ExtremeXOS:
     walk:
     - 1.3.6.1.4.1.1916.1.1.1
+    - 1.3.6.1.4.1.1916.1.42.1.1.1.2
     metrics:
     - name: extremeSaveConfiguration
       oid: 1.3.6.1.4.1.1916.1.1.1.3
@@ -1183,6 +1184,14 @@ modules:
       help: This object is set, along the object extremeConfigToUseOnReboot option
         with value 3.This object indicates the file name to be used while saving the
         file - 1.3.6.1.4.1.1916.1.1.1.49
+    - name: extremeLastSaveConfigTime
+      oid: 1.3.6.1.4.1.1916.1.42.1.1.1.2
+      type: DisplayString
+      help: This object will return the date and time of the last configuration save
+        operation - 1.3.6.1.4.1.1916.1.42.1.1.1.2
+      indexes:
+      - labelname: extremeLastSaveConfigSlotId
+        type: gauge
   HPE:
     walk:
     - 1.3.6.1.4.1.25506.2.6.1.1.1.1
@@ -10137,6 +10146,7 @@ modules:
     - 1.3.6.1.4.1.2636.3.1.2.0
     - 1.3.6.1.4.1.2636.3.1.3.0
     - 1.3.6.1.4.1.2636.3.1.5.0
+    - 1.3.6.1.4.1.2636.3.18.1.2.0
     metrics:
     - name: jnxLEDAssociateTable
       oid: 1.3.6.1.4.1.2636.3.1.10.1.1
@@ -10692,6 +10702,10 @@ modules:
       type: gauge
       help: The value of sysUpTime when the subject was last installed, up-and-running
         - 1.3.6.1.4.1.2636.3.1.5
+    - name: jnxCmCfgChgLatestTime
+      oid: 1.3.6.1.4.1.2636.3.18.1.2
+      type: gauge
+      help: The value of sysUpTime when the configuration was last changed - 1.3.6.1.4.1.2636.3.18.1.2
     - name: jnxAlarmRelayMode
       oid: 1.3.6.1.4.1.2636.3.4.2.1
       type: gauge
