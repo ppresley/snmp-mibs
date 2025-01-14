@@ -118,6 +118,7 @@ modules:
     - ciscoEnvMonFanStatusEntry
     - ciscoEnvMonSupplyStatusEntry
     - ciscoEnvMonMIBNotificationEnables
+    - ccmHistoryRunningLastChanged
 
   # Cisco Nexus MIBS
   cisco_nexus:
@@ -127,6 +128,7 @@ modules:
     - cefcFRUPowerStatusEntry
     - dot3StatsEntry
     - entSensorValueEntry
+    - ccmHistoryRunningLastChanged
 
   # Juniper MIBS
   juniper:

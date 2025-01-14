@@ -6889,6 +6889,8 @@ modules:
     - 1.3.6.1.4.1.9.9.13.1.5.1
     - 1.3.6.1.4.1.9.9.13.2
     - 1.3.6.1.4.1.9.9.48.1.1
+    get:
+    - 1.3.6.1.4.1.9.9.43.1.1.1.0
     metrics:
     - name: busyPer
       oid: 1.3.6.1.4.1.9.2.1.56
@@ -7091,6 +7093,11 @@ modules:
       enum_values:
         1: "true"
         2: "false"
+    - name: ccmHistoryRunningLastChanged
+      oid: 1.3.6.1.4.1.9.9.43.1.1.1
+      type: gauge
+      help: The value of sysUpTime when the running configuration was last changed
+        - 1.3.6.1.4.1.9.9.43.1.1.1
     - name: ciscoMemoryPoolType
       oid: 1.3.6.1.4.1.9.9.48.1.1.1.1
       type: gauge
@@ -7163,6 +7170,8 @@ modules:
     - 1.3.6.1.4.1.9.9.117.1.1.2.1
     - 1.3.6.1.4.1.9.9.117.1.4.1.1
     - 1.3.6.1.4.1.9.9.91.1.1.1.1
+    get:
+    - 1.3.6.1.4.1.9.9.43.1.1.1.0
     metrics:
     - name: dot3StatsIndex
       oid: 1.3.6.1.2.1.10.7.2.1.1
@@ -7590,6 +7599,11 @@ modules:
         1: unknown
         2: frontToBack
         3: backToFront
+    - name: ccmHistoryRunningLastChanged
+      oid: 1.3.6.1.4.1.9.9.43.1.1.1
+      type: gauge
+      help: The value of sysUpTime when the running configuration was last changed
+        - 1.3.6.1.4.1.9.9.43.1.1.1
     - name: entSensorType
       oid: 1.3.6.1.4.1.9.9.91.1.1.1.1.1
       type: gauge
