@@ -148,6 +148,9 @@ modules:
     - wlsxWlanAccessPointInfoGroup
     - wlsxWlanStationInfoGroup
     - wlsxWlanAPStatsTable
+    - alarmActiveStatsActiveCurrent
+    - nlmStatsGlobalNotificationsLogged
+    - nlmStatsGlobalNotificationsBumped
   
   # Aruba MIBS
   cppm:
