@@ -195,3 +195,13 @@ modules:
     - ifHCOutOctets
     - ifInErrors
     - ifOutErrors
+
+  # Palo Alto Firewall MIB
+  paloalto:
+    walk:
+    - panSys
+    - panChassis
+    - panSession
+    - panMgmt
+    - panGlobalProtect
+    - panLogCollector

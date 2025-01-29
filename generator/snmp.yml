@@ -11413,3 +11413,1012 @@ modules:
         2: warning
         3: critical
         4: audit
+  paloalto:
+    walk:
+    - 1.3.6.1.4.1.25461.2.1.2.1
+    - 1.3.6.1.4.1.25461.2.1.2.2
+    - 1.3.6.1.4.1.25461.2.1.2.3
+    - 1.3.6.1.4.1.25461.2.1.2.4
+    - 1.3.6.1.4.1.25461.2.1.2.5
+    - 1.3.6.1.4.1.25461.2.1.2.6
+    metrics:
+    - name: panSysSwVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.1
+      type: DisplayString
+      help: Full software version - 1.3.6.1.4.1.25461.2.1.2.1.1
+    - name: panSysHwVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.2
+      type: DisplayString
+      help: Hardware version of the unit. - 1.3.6.1.4.1.25461.2.1.2.1.2
+    - name: panSysSerialNumber
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.3
+      type: DisplayString
+      help: The serial number of the unit - 1.3.6.1.4.1.25461.2.1.2.1.3
+    - name: panSysTimeZoneOffset
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.4
+      type: gauge
+      help: The offset in seconds from UTC of the system's time zone - 1.3.6.1.4.1.25461.2.1.2.1.4
+    - name: panSysDaylightSaving
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.5
+      type: gauge
+      help: Whether daylight savings are in currently in effect for the system's time
+        zone. - 1.3.6.1.4.1.25461.2.1.2.1.5
+      enum_values:
+        1: "true"
+        2: "false"
+    - name: panSysVpnClientVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.6
+      type: DisplayString
+      help: Currently installed VPN client package version - 1.3.6.1.4.1.25461.2.1.2.1.6
+    - name: panSysAppVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.7
+      type: DisplayString
+      help: Currently installed application definition version - 1.3.6.1.4.1.25461.2.1.2.1.7
+    - name: panSysAvVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.8
+      type: DisplayString
+      help: Currently installed antivirus version - 1.3.6.1.4.1.25461.2.1.2.1.8
+    - name: panSysThreatVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.9
+      type: DisplayString
+      help: Currently installed threat definition version - 1.3.6.1.4.1.25461.2.1.2.1.9
+    - name: panSysUrlFilteringVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.10
+      type: DisplayString
+      help: Currently installed URL filtering version - 1.3.6.1.4.1.25461.2.1.2.1.10
+    - name: panSysHAState
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.11
+      type: DisplayString
+      help: Current high-availability state. - 1.3.6.1.4.1.25461.2.1.2.1.11
+    - name: panSysHAPeerState
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.12
+      type: DisplayString
+      help: Current peer high-availability state. - 1.3.6.1.4.1.25461.2.1.2.1.12
+    - name: panSysHAMode
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.13
+      type: DisplayString
+      help: Current high-availability mode (disabled, active-passive, or active-active).
+        - 1.3.6.1.4.1.25461.2.1.2.1.13
+    - name: panSysUrlFilteringDatabase
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.14
+      type: DisplayString
+      help: Current installed URL filtering database (surfcontrol, brightcloud, etc)
+        - 1.3.6.1.4.1.25461.2.1.2.1.14
+    - name: panSysGlobalProtectClientVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.15
+      type: DisplayString
+      help: Currently installed global-protect client package version - 1.3.6.1.4.1.25461.2.1.2.1.15
+    - name: panSysOpswatDatafileVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.16
+      type: DisplayString
+      help: Currently installed opswat database version - 1.3.6.1.4.1.25461.2.1.2.1.16
+    - name: panSysWildfireVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.17
+      type: DisplayString
+      help: Currently installed wildfire content version - 1.3.6.1.4.1.25461.2.1.2.1.17
+    - name: panSysWildfirePrivateCloudVersion
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.18
+      type: DisplayString
+      help: Currently installed wildfire private cloud content version - 1.3.6.1.4.1.25461.2.1.2.1.18
+    - name: panAhoSw
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.1
+      type: counter
+      help: The total usage of software for AHO - 1.3.6.1.4.1.25461.2.1.2.1.19.1
+    - name: panDfaSw
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.2
+      type: counter
+      help: The total number of dfa match using software - 1.3.6.1.4.1.25461.2.1.2.1.19.2
+    - name: panFlowHostServiceAllow
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.3
+      type: counter
+      help: Device management session allowed - 1.3.6.1.4.1.25461.2.1.2.1.19.3
+    - name: panHaPathmonSent
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.4
+      type: counter
+      help: HA path-monitoring packets sent - 1.3.6.1.4.1.25461.2.1.2.1.19.4
+    - name: panAhoFpga
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.5
+      type: counter
+      help: The total requests to FPGA for AHO - 1.3.6.1.4.1.25461.2.1.2.1.19.5
+    - name: panDfaFpga
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.6
+      type: counter
+      help: The total requests to FPGA for DFA - 1.3.6.1.4.1.25461.2.1.2.1.19.6
+    - name: panFpgaPkt
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.7
+      type: counter
+      help: The packets held because of requests to FPGA - 1.3.6.1.4.1.25461.2.1.2.1.19.7
+    - name: panFlowDosAgMaxSessLimit
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.1
+      type: counter
+      help: Session limit reached for aggregate profile, drop session - 1.3.6.1.4.1.25461.2.1.2.1.19.8.1
+    - name: panFlowDosBlkNumEntries
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.2
+      type: counter
+      help: Number of entries in DOS block table - 1.3.6.1.4.1.25461.2.1.2.1.19.8.2
+    - name: panFlowDosClMaxSessLimit
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.3
+      type: counter
+      help: Session limit reached for classified profile, drop session - 1.3.6.1.4.1.25461.2.1.2.1.19.8.3
+    - name: panFlowDosClSyncookieAckErr
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.4
+      type: counter
+      help: 'TCP SYN cookies: Invalid ACKs received, classified profile - 1.3.6.1.4.1.25461.2.1.2.1.19.8.4'
+    - name: panFlowDosClSyncookieAckRcv
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.5
+      type: counter
+      help: 'TCP SYN cookies: ACKs to cookies received, classified profile - 1.3.6.1.4.1.25461.2.1.2.1.19.8.5'
+    - name: panFlowDosClSyncookieBlkDur
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.6
+      type: counter
+      help: 'Packets dropped: Flagged for blocking and under block duration for cl
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.6'
+    - name: panFlowDosClSyncookieMax
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.7
+      type: counter
+      help: 'Packet dropped: SYN cookies maximum threshold reached, classified pro
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.7'
+    - name: panFlowDosClSyncookieSent
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.8
+      type: counter
+      help: 'TCP SYN cookies: cookies sent, classified profile - 1.3.6.1.4.1.25461.2.1.2.1.19.8.8'
+    - name: panFlowMeterVsysThrottle
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.9
+      type: counter
+      help: 'Session metering: sessions throttled by vsys configuration - 1.3.6.1.4.1.25461.2.1.2.1.19.8.9'
+    - name: panFlowPolicyDeny
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.10
+      type: counter
+      help: 'Session setup: denied by policy - 1.3.6.1.4.1.25461.2.1.2.1.19.8.10'
+    - name: panFlowPolicyNat
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.11
+      type: counter
+      help: 'Session setup: source NAT IP/port allocation error - 1.3.6.1.4.1.25461.2.1.2.1.19.8.11'
+    - name: panFlowScanDrop
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.12
+      type: counter
+      help: 'Session setup: denied by scan detection - 1.3.6.1.4.1.25461.2.1.2.1.19.8.12'
+    - name: panFlowDosDropIpBlocked
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.13
+      type: counter
+      help: 'Packets dropped: Flagged for blocking and under block duration by oth
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.13'
+    - name: panFlowDosRedIcmp
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.14
+      type: counter
+      help: 'Packets dropped: Zone protection protocol ''icmp'' RED - 1.3.6.1.4.1.25461.2.1.2.1.19.8.14'
+    - name: panFlowDosRedIcmp6
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.15
+      type: counter
+      help: 'Packets dropped: Zone protection protocol ''icmpv6'' RED - 1.3.6.1.4.1.25461.2.1.2.1.19.8.15'
+    - name: panFlowDosRedIp
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.16
+      type: counter
+      help: 'Packets dropped: Zone protection protocol ''other-ip'' RED - 1.3.6.1.4.1.25461.2.1.2.1.19.8.16'
+    - name: panFlowDosRedTcp
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.17
+      type: counter
+      help: 'Packets dropped: Zone protection protocol ''tcp-syn'' RED - 1.3.6.1.4.1.25461.2.1.2.1.19.8.17'
+    - name: panFlowDosRedUdp
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.18
+      type: counter
+      help: 'Packets dropped: Zone protection protocol ''udp'' RED - 1.3.6.1.4.1.25461.2.1.2.1.19.8.18'
+    - name: panFlowDosRuleAgBlkDur
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.19
+      type: counter
+      help: 'Packets dropped: Flagged for blocking and under block duration for ag
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.19'
+    - name: panFlowDosRuleAgRedAct
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.20
+      type: counter
+      help: 'Packets dropped: Activate aggregate RED threshold reached, random ear
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.20'
+    - name: panFlowDosRuleAgRedMax
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.21
+      type: counter
+      help: 'Packets dropped: Maximal aggregate RED threshold reached - 1.3.6.1.4.1.25461.2.1.2.1.19.8.21'
+    - name: panFlowDosRuleDeny
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.22
+      type: counter
+      help: 'Packets dropped: Denied action by DoS policy - 1.3.6.1.4.1.25461.2.1.2.1.19.8.22'
+    - name: panFlowDosRuleDrop
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.23
+      type: counter
+      help: 'Packets dropped: Rate limited or IP blocked - 1.3.6.1.4.1.25461.2.1.2.1.19.8.23'
+    - name: panFlowDosRuleDropAggr
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.24
+      type: counter
+      help: 'Packets dropped: due to aggregate rate limiting - 1.3.6.1.4.1.25461.2.1.2.1.19.8.24'
+    - name: panFlowDosRuleDropClBlkDur
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.25
+      type: counter
+      help: 'Packets dropped: Flagged for blocking and under block duration for cl
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.25'
+    - name: panFlowDosRuleDropClRedAct
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.26
+      type: counter
+      help: 'Packets dropped: Activate classified RED threshold reached, random ea
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.26'
+    - name: panFlowDosRuleDropClRedMax
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.27
+      type: counter
+      help: 'Packets dropped: Maximal classified RED threshold reached - 1.3.6.1.4.1.25461.2.1.2.1.19.8.27'
+    - name: panFlowDosRuleDropClassified
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.28
+      type: counter
+      help: 'Packets dropped: due to classified rate limiting - 1.3.6.1.4.1.25461.2.1.2.1.19.8.28'
+    - name: panFlowDosSyncookieBlkDur
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.29
+      type: counter
+      help: 'Packets dropped: Flagged for blocking and under block duration for ag
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.29'
+    - name: panFlowDosSyncookieMax
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.30
+      type: counter
+      help: 'Packet dropped: SYN cookies maximum threshold reached, aggregate prof
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.30'
+    - name: panFlowDosZoneRedAct
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.31
+      type: counter
+      help: 'Packets dropped: Activate zone RED threshold reached, random early dr
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.31'
+    - name: panFlowDosZoneRedMax
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.32
+      type: counter
+      help: 'Packets dropped: Maximal zone RED threshold reached - 1.3.6.1.4.1.25461.2.1.2.1.19.8.32'
+    - name: panFlowDosBlkSwEntries
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.33
+      type: counter
+      help: Number of entries in DOS Software block table - 1.3.6.1.4.1.25461.2.1.2.1.19.8.33
+    - name: panFlowDosBlkHwEntries
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.34
+      type: counter
+      help: Number of entries in DOS Hardware block table - 1.3.6.1.4.1.25461.2.1.2.1.19.8.34
+    - name: panFlowDosSyncookieNotTcpSyn
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.35
+      type: counter
+      help: TCP SYN cookies:TCP SYN cookie not SYN - 1.3.6.1.4.1.25461.2.1.2.1.19.8.35
+    - name: panFlowDosSyncookieNotTcpSynAck
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.36
+      type: counter
+      help: TCP SYN cookies:TCP SYN cookie not SYN-ACK - 1.3.6.1.4.1.25461.2.1.2.1.19.8.36
+    - name: panFlowDosPfIpspoof
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.37
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-ip-spoof' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.37
+    - name: panFlowDosPfIpfrag
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.38
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-ip-frag' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.38
+    - name: panFlowDosPfPing0
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.39
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-icmp-ping-zero-id' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.39
+    - name: panFlowDosPfIcmpfrag
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.40
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-icmp-frag' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.40
+    - name: panFlowDosPfIcmplpkt
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.41
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-icmp-large-packet' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.41
+    - name: panFlowDosPfIcmperr
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.42
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-icmp-error' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.42
+    - name: panFlowDosPfNoreplyttl
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.43
+      type: counter
+      help: Packets dropped:Zone protection option 'suppress-icmp-timeexceeded' -
+        1.3.6.1.4.1.25461.2.1.2.1.19.8.43
+    - name: panFlowDosPfNoreplyneedfrag
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.44
+      type: counter
+      help: Packets dropped:Zone protection option 'suppress-icmp-needfrag' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.44
+    - name: panFlowDosPfStrictsource
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.45
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-strict-source-routing'
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.45
+    - name: panFlowDosPfLoosesource
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.46
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-loose-source-routing'
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.46
+    - name: panFlowDosPfTimestamp
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.47
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-timestamp' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.47
+    - name: panFlowDosPfRecordroute
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.48
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-record-route' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.48
+    - name: panFlowDosPfSecurity
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.49
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-security' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.49
+    - name: panFlowDosPfSatnetid
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.50
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-stream-id' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.50
+    - name: panFlowDosPfUnknown
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.51
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-unknown-option' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.51
+    - name: panFlowDosPfBadoption
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.52
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-malformed-option' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.52
+    - name: panFlowDosPfTcpoverlappingmismatch
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.53
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-overlapping-tcp-segment-mismatch'
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.53
+    - name: panFlowDosPfStrictip
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.54
+      type: counter
+      help: Packets dropped:Zone protection option 'strict-ip-check' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.54
+    - name: panFlowDosPfTcpsplithandshake
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.55
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-tcp-split-handshake' -
+        1.3.6.1.4.1.25461.2.1.2.1.19.8.55
+    - name: panFlowDosPfTcpsyndata
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.56
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-tcp-syn-with-data' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.56
+    - name: panFlowDosPfTcpsynackdata
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.57
+      type: counter
+      help: Packets dropped:Zone protection option 'discard-tcp-synack-with-data'
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.57
+    - name: panFlowDosIp6Route0
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.58
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-header-0' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.58
+    - name: panFlowDosIp6Route1
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.59
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-header-1' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.59
+    - name: panFlowDosIp6Route3
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.60
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-header-3' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.60
+    - name: panFlowDosIp6Route4to252
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.61
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-header-4-252' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.61
+    - name: panFlowDosIp6Route253
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.62
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-header-253' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.62
+    - name: panFlowDosIp6Route254
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.63
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-header-254' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.63
+    - name: panFlowDosIp6Route255
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.64
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-header-255' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.64
+    - name: panFlowDosIp6Ip4cmpt
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.65
+      type: counter
+      help: Packets dropped:Zone protection option 'ipv4-compatible-address' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.65
+    - name: panFlowDosIp6Acast
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.66
+      type: counter
+      help: Packets dropped:Zone protection option 'anycast-source' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.66
+    - name: panFlowDosIp6OptionsInvalidIPv6
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.67
+      type: counter
+      help: Packets dropped:Zone protection option 'options-invalid-ipv6-discard'
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.67
+    - name: panFlowDosIp6Icmpv6ErrorInvalid
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.68
+      type: counter
+      help: Packets dropped:Zone protection option 'icmpv6-too-big-small-mtu-discard'
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.8.68
+    - name: panFlowDosIp6NeedlessIpv6FragHdr
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.69
+      type: counter
+      help: Packets dropped:Zone protection option 'needless-fragment-hdr' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.69
+    - name: panFlowDosIp6RsvdSet
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.70
+      type: counter
+      help: Packets dropped:Zone protection option 'reserved-field-set-discard' -
+        1.3.6.1.4.1.25461.2.1.2.1.19.8.70
+    - name: panFlowDosIPv6ExtHdrHopByHop
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.71
+      type: counter
+      help: Packets dropped:Zone protection option 'hop-by-hop-hdr' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.71
+    - name: panFlowDosip6IPv6ExtHdrRouting
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.72
+      type: counter
+      help: Packets dropped:Zone protection option 'routing-hdr' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.72
+    - name: panFlowDosIp6IPv6ExtHdrDestOpt
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.73
+      type: counter
+      help: Packets dropped:Zone protection option 'dest-option-hdr' - 1.3.6.1.4.1.25461.2.1.2.1.19.8.73
+    - name: panFlowDosPbpDrop
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.74
+      type: counter
+      help: Packets dropped:Dropped by packet buffer protection RED - 1.3.6.1.4.1.25461.2.1.2.1.19.8.74
+    - name: panFlowDosCurrSessIncrFailed
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.75
+      type: counter
+      help: Unable to increment current session count on session create - 1.3.6.1.4.1.25461.2.1.2.1.19.8.75
+    - name: panFlowDosCurrSessDecrFailed
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.8.76
+      type: counter
+      help: Unable to decrement current session count on session delete - 1.3.6.1.4.1.25461.2.1.2.1.19.8.76
+    - name: panFlowFwdL3TtlZero
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.9.1
+      type: counter
+      help: 'Packets dropped: IP TTL reaches zero - 1.3.6.1.4.1.25461.2.1.2.1.19.9.1'
+    - name: panFlowMeterHostThrottle
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.9.2
+      type: counter
+      help: 'Session metering: sessions throttled by management session threshold
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.9.2'
+    - name: panFlowHostServiceDeny
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.9.3
+      type: counter
+      help: Device management session denied - 1.3.6.1.4.1.25461.2.1.2.1.19.9.3
+    - name: panFlowHostServiceUnknown
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.9.4
+      type: counter
+      help: 'Session discarded: unknown application to control plane - 1.3.6.1.4.1.25461.2.1.2.1.19.9.4'
+    - name: panPktAllocFailure
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.9.5
+      type: counter
+      help: Packet allocation error - 1.3.6.1.4.1.25461.2.1.2.1.19.9.5
+    - name: panPktAllocFailureCos
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.9.6
+      type: counter
+      help: Packet allocation error due to QoS control - 1.3.6.1.4.1.25461.2.1.2.1.19.9.6
+    - name: panSessionDiscard
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.9.7
+      type: counter
+      help: Session set to discard by security policy check - 1.3.6.1.4.1.25461.2.1.2.1.19.9.7
+    - name: panFlowIpfragFragErr
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.10.1
+      type: counter
+      help: 'Packet dropped: IP fragmentation error - 1.3.6.1.4.1.25461.2.1.2.1.19.10.1'
+    - name: panFlowIpfragRecv
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.10.2
+      type: counter
+      help: IP fragments received - 1.3.6.1.4.1.25461.2.1.2.1.19.10.2
+    - name: panTcpAllocWqeFailed
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.1
+      type: counter
+      help: wqe allocation failure in tcp - 1.3.6.1.4.1.25461.2.1.2.1.19.11.1
+    - name: panTcpDeny
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.2
+      type: counter
+      help: session denied because of failure in tcp reassembly - 1.3.6.1.4.1.25461.2.1.2.1.19.11.2
+    - name: panTcpDropOutOfWnd
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.3
+      type: counter
+      help: out-of-window packets dropped - 1.3.6.1.4.1.25461.2.1.2.1.19.11.3
+    - name: panTcpDropPacket
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.4
+      type: counter
+      help: packets dropped because of failure in tcp reassembly - 1.3.6.1.4.1.25461.2.1.2.1.19.11.4
+    - name: panFlowActionClose
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.5
+      type: counter
+      help: TCP sessions closed via injecting RST - 1.3.6.1.4.1.25461.2.1.2.1.19.11.5
+    - name: panFlowActionReset
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.6
+      type: counter
+      help: TCP clients reset via responding RST - 1.3.6.1.4.1.25461.2.1.2.1.19.11.6
+    - name: panFlowTcpNonSyn
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.7
+      type: counter
+      help: Non-SYN TCP packets without session match - 1.3.6.1.4.1.25461.2.1.2.1.19.11.7
+    - name: panTcpExceedSegLimit
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.11.8
+      type: counter
+      help: packets dropped due to the limitation on global tcp out-of-order pack
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.11.8
+    - name: panFlowTciGreDecapSuccess
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.1
+      type: counter
+      help: Total GRE sessions tunnel inspected - 1.3.6.1.4.1.25461.2.1.2.1.19.12.1
+    - name: panFlowTciGreDecapFailed
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.2
+      type: counter
+      help: Total GRE sessions for failed tunnel inspected - 1.3.6.1.4.1.25461.2.1.2.1.19.12.2
+    - name: panFlowTciGreDecapUnknown
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.3
+      type: counter
+      help: Total unknown tunnel inspection packets in GRE tunnel [passed|dropped]
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.12.3
+    - name: panFlowTciIpsecDecapSuccess
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.4
+      type: counter
+      help: Total Ipsec sessions tunnel inspected - 1.3.6.1.4.1.25461.2.1.2.1.19.12.4
+    - name: panFlowTciIpsecDecapFailed
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.5
+      type: counter
+      help: Total IPSEC sessions for failed tunnel inspected - 1.3.6.1.4.1.25461.2.1.2.1.19.12.5
+    - name: panFlowTciIpsecDecapUnknown
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.6
+      type: counter
+      help: Total unknown tunnel inspection packets in IPSEC tunnel [passed|dropped]
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.12.6
+    - name: panFlowTciGtpDecapSuccess
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.7
+      type: counter
+      help: Total GTP sessions tunnel inspected - 1.3.6.1.4.1.25461.2.1.2.1.19.12.7
+    - name: panFlowTciGtpDecapFailed
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.8
+      type: counter
+      help: Total GTP sessions for failed tunnel inspected - 1.3.6.1.4.1.25461.2.1.2.1.19.12.8
+    - name: panFlowTciGtpDecapUnknown
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.19.12.9
+      type: counter
+      help: Total unknown tunnel inspection packets in GTP tunnel[passed|dropped]
+        - 1.3.6.1.4.1.25461.2.1.2.1.19.12.9
+    - name: panSysAppReleaseDate
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.20
+      type: DisplayString
+      help: Currently installed application definition release date - 1.3.6.1.4.1.25461.2.1.2.1.20
+    - name: panSysThreatReleaseDate
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.21
+      type: DisplayString
+      help: Currently installed threat release date - 1.3.6.1.4.1.25461.2.1.2.1.21
+    - name: panSysAvReleaseDate
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.22
+      type: DisplayString
+      help: Currently installed antivirus release date - 1.3.6.1.4.1.25461.2.1.2.1.22
+    - name: panSysWfReleaseDate
+      oid: 1.3.6.1.4.1.25461.2.1.2.1.23
+      type: DisplayString
+      help: Currently installed WildFire release date - 1.3.6.1.4.1.25461.2.1.2.1.23
+    - name: panChassisType
+      oid: 1.3.6.1.4.1.25461.2.1.2.2.1
+      type: DisplayString
+      help: Chassis type for this Palo Alto device. - 1.3.6.1.4.1.25461.2.1.2.2.1
+    - name: panMSeriesMode
+      oid: 1.3.6.1.4.1.25461.2.1.2.2.2
+      type: DisplayString
+      help: Series Mode for this Palo Alto device. - 1.3.6.1.4.1.25461.2.1.2.2.2
+    - name: panSessionUtilization
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.1
+      type: gauge
+      help: Session table utilization percentage - 1.3.6.1.4.1.25461.2.1.2.3.1
+    - name: panSessionMax
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.2
+      type: gauge
+      help: Total number of sessions supported. - 1.3.6.1.4.1.25461.2.1.2.3.2
+    - name: panSessionActive
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.3
+      type: gauge
+      help: Total number of active sessions. - 1.3.6.1.4.1.25461.2.1.2.3.3
+    - name: panSessionActiveTcp
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.4
+      type: gauge
+      help: Total number of active TCP sessions. - 1.3.6.1.4.1.25461.2.1.2.3.4
+    - name: panSessionActiveUdp
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.5
+      type: gauge
+      help: Total number of active UDP sessions. - 1.3.6.1.4.1.25461.2.1.2.3.5
+    - name: panSessionActiveICMP
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.6
+      type: gauge
+      help: Total number of active ICMP sessions. - 1.3.6.1.4.1.25461.2.1.2.3.6
+    - name: panSessionActiveSslProxy
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.7
+      type: gauge
+      help: Total number of active SSL proxy sessions. - 1.3.6.1.4.1.25461.2.1.2.3.7
+    - name: panSessionSslProxyUtilization
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.8
+      type: gauge
+      help: SSL proxy Session utilization percentage - 1.3.6.1.4.1.25461.2.1.2.3.8
+    - name: panVsysId
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.1
+      type: gauge
+      help: Vsys id - 1.3.6.1.4.1.25461.2.1.2.3.9.1.1
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panVsysName
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.2
+      type: DisplayString
+      help: User assigned vsys name (empty string if not available) - 1.3.6.1.4.1.25461.2.1.2.3.9.1.2
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panVsysSessionUtilizationPct
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.3
+      type: gauge
+      help: Vsys utilization percentage, if session limit is configured - 1.3.6.1.4.1.25461.2.1.2.3.9.1.3
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panVsysActiveSessions
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.4
+      type: gauge
+      help: Active sessions on this Vsys - 1.3.6.1.4.1.25461.2.1.2.3.9.1.4
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panVsysMaxSessions
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.5
+      type: gauge
+      help: Max sessions on this Vsys, if session limit is configured - 1.3.6.1.4.1.25461.2.1.2.3.9.1.5
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panVsysActiveTcpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.6
+      type: gauge
+      help: Number of active Tcp Connections per second for thie vSys. - 1.3.6.1.4.1.25461.2.1.2.3.9.1.6
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panVsysActiveUdpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.7
+      type: gauge
+      help: Number of active Udp Connections per second for thie vSys. - 1.3.6.1.4.1.25461.2.1.2.3.9.1.7
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panVsysActiveOtherIpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.9.1.8
+      type: gauge
+      help: Number of active Other IP Connections per second for thie vSys. - 1.3.6.1.4.1.25461.2.1.2.3.9.1.8
+      indexes:
+      - labelname: panVsysId
+        type: gauge
+    - name: panZoneName
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.10.1.1
+      type: DisplayString
+      help: Zone name for the interface - 1.3.6.1.4.1.25461.2.1.2.3.10.1.1
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: panZoneActiveTcpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.10.1.2
+      type: gauge
+      help: Number of active TCP connections per second for this zone. - 1.3.6.1.4.1.25461.2.1.2.3.10.1.2
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: panZoneActiveUdpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.10.1.3
+      type: gauge
+      help: Number of active UDP connections per second for this zone. - 1.3.6.1.4.1.25461.2.1.2.3.10.1.3
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: panZoneActiveOtherIpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.10.1.4
+      type: gauge
+      help: Number of active Other IP connections per second for this zone. - 1.3.6.1.4.1.25461.2.1.2.3.10.1.4
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: ifIndex
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.11.1.1
+      type: gauge
+      help: Index of the interface - 1.3.6.1.4.1.25461.2.1.2.3.11.1.1
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: ifDescr
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.11.1.2
+      type: DisplayString
+      help: Description (name) of the interface - 1.3.6.1.4.1.25461.2.1.2.3.11.1.2
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: panIfActiveTcpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.11.1.3
+      type: gauge
+      help: Number of active TCP connections per second for this interface. - 1.3.6.1.4.1.25461.2.1.2.3.11.1.3
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: panIfActiveUdpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.11.1.4
+      type: gauge
+      help: Number of active UDP connections per second for this interface. - 1.3.6.1.4.1.25461.2.1.2.3.11.1.4
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: panIfActiveOtherIpCps
+      oid: 1.3.6.1.4.1.25461.2.1.2.3.11.1.5
+      type: gauge
+      help: Number of active Other IP connections per second for this interface. -
+        1.3.6.1.4.1.25461.2.1.2.3.11.1.5
+      indexes:
+      - labelname: ifIndex
+        type: gauge
+    - name: panMgmtPanoramaConnected
+      oid: 1.3.6.1.4.1.25461.2.1.2.4.1
+      type: DisplayString
+      help: Current Connection status to Panorama Server (connected, not-connected)
+        - 1.3.6.1.4.1.25461.2.1.2.4.1
+    - name: panMgmtPanorama2Connected
+      oid: 1.3.6.1.4.1.25461.2.1.2.4.2
+      type: DisplayString
+      help: Current Connection status to Panorama2 Server (connected, not-connected)
+        - 1.3.6.1.4.1.25461.2.1.2.4.2
+    - name: panGPGWUtilizationPct
+      oid: 1.3.6.1.4.1.25461.2.1.2.5.1.1
+      type: gauge
+      help: GlobalProtect Gateway utilization percentage - 1.3.6.1.4.1.25461.2.1.2.5.1.1
+    - name: panGPGWUtilizationMaxTunnels
+      oid: 1.3.6.1.4.1.25461.2.1.2.5.1.2
+      type: gauge
+      help: Max tunnels allowed - 1.3.6.1.4.1.25461.2.1.2.5.1.2
+    - name: panGPGWUtilizationActiveTunnels
+      oid: 1.3.6.1.4.1.25461.2.1.2.5.1.3
+      type: gauge
+      help: Number of active tunnels - 1.3.6.1.4.1.25461.2.1.2.5.1.3
+    - name: panLcLogRate
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.1
+      type: gauge
+      help: The write rate in logs/s on the Log Collection - 1.3.6.1.4.1.25461.2.1.2.6.1.1
+    - name: panLcLogDurationTraffic
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.1
+      type: gauge
+      help: The Log duration (in days) for the traffic logs on the Log Collector -
+        1.3.6.1.4.1.25461.2.1.2.6.1.2.1
+    - name: panLcLogDurationConfig
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.2
+      type: gauge
+      help: The Log duration (in days) for the config logs on the Log Collector -
+        1.3.6.1.4.1.25461.2.1.2.6.1.2.2
+    - name: panLcLogDurationSystem
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.3
+      type: gauge
+      help: The Log duration (in days) for the system logs on the Log Collector -
+        1.3.6.1.4.1.25461.2.1.2.6.1.2.3
+    - name: panLcLogDurationThreat
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.4
+      type: gauge
+      help: The Log duration (in days) for the threat logs on the Log Collector -
+        1.3.6.1.4.1.25461.2.1.2.6.1.2.4
+    - name: panLcLogDurationAppstat
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.5
+      type: gauge
+      help: The Log duration (in days) for the appstat logs on the Log Collector -
+        1.3.6.1.4.1.25461.2.1.2.6.1.2.5
+    - name: panLcLogDurationTrsum
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.6
+      type: gauge
+      help: The Log duration (in days) for the trsum logs on the Log Collector - 1.3.6.1.4.1.25461.2.1.2.6.1.2.6
+    - name: panLcLogDurationThsum
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.7
+      type: gauge
+      help: The Log duration (in days) for the thsum logs on the Log Collector - 1.3.6.1.4.1.25461.2.1.2.6.1.2.7
+    - name: panLcLogDurationEvent
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.8
+      type: gauge
+      help: The Log duration (in days) for the event logs on the Log Collector - 1.3.6.1.4.1.25461.2.1.2.6.1.2.8
+    - name: panLcLogDurationAlarm
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.9
+      type: gauge
+      help: The Log duration (in days) for the alarm logs on the Log Collector - 1.3.6.1.4.1.25461.2.1.2.6.1.2.9
+    - name: panLcLogDurationHipmatch
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.10
+      type: gauge
+      help: The Log duration (in days) for the hipmatch logs on the Log Collector
+        - 1.3.6.1.4.1.25461.2.1.2.6.1.2.10
+    - name: panLcLogDurationUserid
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.2.11
+      type: gauge
+      help: The Log duration (in days) for the userid logs on the Log Collector -
+        1.3.6.1.4.1.25461.2.1.2.6.1.2.11
+    - name: panLcDiskUsageId
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.3.1.1
+      type: gauge
+      help: The Log disk id - 1.3.6.1.4.1.25461.2.1.2.6.1.3.1.1
+      indexes:
+      - labelname: panLcDiskUsageId
+        type: gauge
+    - name: panLcDiskUsage
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.3.1.2
+      type: gauge
+      help: The Log disk usage on the Log Collector - 1.3.6.1.4.1.25461.2.1.2.6.1.3.1.2
+      indexes:
+      - labelname: panLcDiskUsageId
+        type: gauge
+    - name: panLcLogType
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.1
+      type: DisplayString
+      help: Log type for Log Collector. - 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.1
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLcDiskUsageDiskSpacePct
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.2
+      type: DisplayString
+      help: Disk Usage Percentage for particular log type for Log Collector aggregated
+        over all disks. - 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.2
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLcDiskUsageRetention
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.3
+      type: gauge
+      help: Log Rentention for particular log type for Log Collector. - 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.3
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLcDiskQuotaPct
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.4
+      type: DisplayString
+      help: Disk Quota Percentage for particular log type for Log Collector aggregated
+        over all disks. - 1.3.6.1.4.1.25461.2.1.2.6.1.4.1.4
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLocalLogType
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.1
+      type: DisplayString
+      help: Log type for Log Collector. - 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.1
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLocalDiskUsageDiskSpace
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.2
+      type: DisplayString
+      help: Disk Usage (in MB) for particular log type for Log Collector. - 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.2
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLocalDiskUsageRetention
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.3
+      type: gauge
+      help: Log Rentention for particular log type for Log Collector. - 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.3
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLocalDiskQuota
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.4
+      type: DisplayString
+      help: Disk Quota (in MB) for particular log type for Log Collector. - 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.4
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLocalDiskQuotaPct
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.5
+      type: DisplayString
+      help: Disk Quota Percentage for particular log type for Log Collector. - 1.3.6.1.4.1.25461.2.1.2.6.1.5.1.5
+      indexes:
+      - labelname: panLcLogType
+        type: DisplayString
+    - name: panLcDiskIOPSId
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.6.1.1
+      type: DisplayString
+      help: Disk number for Log Collector or Panorama. - 1.3.6.1.4.1.25461.2.1.2.6.1.6.1.1
+      indexes:
+      - labelname: panLcDiskIOPSId
+        type: DisplayString
+    - name: panLcDiskIORead5min
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.6.1.2
+      type: counter
+      help: Disk read rate over a span of 5 minute interval. - 1.3.6.1.4.1.25461.2.1.2.6.1.6.1.2
+      indexes:
+      - labelname: panLcDiskIOPSId
+        type: DisplayString
+    - name: panLcDiskIOWrite5min
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.1.6.1.3
+      type: counter
+      help: Disk write rate over a span of 5 minute interval. - 1.3.6.1.4.1.25461.2.1.2.6.1.6.1.3
+      indexes:
+      - labelname: panLcDiskIOPSId
+        type: DisplayString
+    - name: panLcIsRedundancyMember
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.2
+      type: gauge
+      help: True value indicates this Log Collector is part of a Collector Group with
+        Redundancy is enabled - 1.3.6.1.4.1.25461.2.1.2.6.2
+      enum_values:
+        1: "true"
+        2: "false"
+    - name: panLcLogFwdStatsTableType
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.3.1.1
+      type: DisplayString
+      help: Name of method used to forward logs. - 1.3.6.1.4.1.25461.2.1.2.6.3.1.1
+      indexes:
+      - labelname: panLcLogFwdStatsTableType
+        type: DisplayString
+    - name: panLcLogFwdStatsTableEnqueueCount
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.3.1.2
+      type: counter
+      help: Counter for number of logs enqueued. - 1.3.6.1.4.1.25461.2.1.2.6.3.1.2
+      indexes:
+      - labelname: panLcLogFwdStatsTableType
+        type: DisplayString
+    - name: panLcLogFwdStatsTableSendCount
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.3.1.3
+      type: counter
+      help: Counter for number of logs sent. - 1.3.6.1.4.1.25461.2.1.2.6.3.1.3
+      indexes:
+      - labelname: panLcLogFwdStatsTableType
+        type: DisplayString
+    - name: panLcLogFwdStatsTableDropCount
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.3.1.4
+      type: counter
+      help: Counter for number of logs dropped. - 1.3.6.1.4.1.25461.2.1.2.6.3.1.4
+      indexes:
+      - labelname: panLcLogFwdStatsTableType
+        type: DisplayString
+    - name: panLcLogFwdStatsTableQueueDepth
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.3.1.5
+      type: counter
+      help: Counter for depth of queue. - 1.3.6.1.4.1.25461.2.1.2.6.3.1.5
+      indexes:
+      - labelname: panLcLogFwdStatsTableType
+        type: DisplayString
+    - name: panLcLoggingConnectedDeviceName
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.4.1.1
+      type: DisplayString
+      help: Name of the device being polled. - 1.3.6.1.4.1.25461.2.1.2.6.4.1.1
+      indexes:
+      - labelname: panLcLoggingConnectedDeviceConnectionId
+        type: DisplayString
+    - name: panLcLoggingConnectedDeviceConnectionId
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.4.1.2
+      type: DisplayString
+      help: Connection id of the device being polled. - 1.3.6.1.4.1.25461.2.1.2.6.4.1.2
+      indexes:
+      - labelname: panLcLoggingConnectedDeviceConnectionId
+        type: DisplayString
+    - name: panLcLoggingConnectedIdLogRate
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.4.1.3
+      type: gauge
+      help: Logging rate for the connection. - 1.3.6.1.4.1.25461.2.1.2.6.4.1.3
+      indexes:
+      - labelname: panLcLoggingConnectedDeviceConnectionId
+        type: DisplayString
+    - name: panLcLoggingDeviceConnectionId
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.5.1.1
+      type: DisplayString
+      help: Connection id of the device being polled. - 1.3.6.1.4.1.25461.2.1.2.6.5.1.1
+      indexes:
+      - labelname: panLcLoggingDeviceConnectionId
+        type: DisplayString
+      - labelname: panLcLoggingLogType
+        type: DisplayString
+    - name: panLcLoggingLogType
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.5.1.2
+      type: DisplayString
+      help: Log Type of the log being polled. - 1.3.6.1.4.1.25461.2.1.2.6.5.1.2
+      indexes:
+      - labelname: panLcLoggingDeviceConnectionId
+        type: DisplayString
+      - labelname: panLcLoggingLogType
+        type: DisplayString
+    - name: panLcLogTypeLastLogRecd
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.5.1.3
+      type: gauge
+      help: Time at which the last log was received. - 1.3.6.1.4.1.25461.2.1.2.6.5.1.3
+      indexes:
+      - labelname: panLcLoggingDeviceConnectionId
+        type: DisplayString
+      - labelname: panLcLoggingLogType
+        type: DisplayString
+    - name: panLcLogTypeLastSeqNumRecd
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.5.1.4
+      type: counter
+      help: Last sequence number received for a type of log. - 1.3.6.1.4.1.25461.2.1.2.6.5.1.4
+      indexes:
+      - labelname: panLcLoggingDeviceConnectionId
+        type: DisplayString
+      - labelname: panLcLoggingLogType
+        type: DisplayString
+    - name: panLcLogTypeLastLogGen
+      oid: 1.3.6.1.4.1.25461.2.1.2.6.5.1.5
+      type: gauge
+      help: Time at which the last log was generated. - 1.3.6.1.4.1.25461.2.1.2.6.5.1.5
+      indexes:
+      - labelname: panLcLoggingDeviceConnectionId
+        type: DisplayString
+      - labelname: panLcLoggingLogType
+        type: DisplayString
