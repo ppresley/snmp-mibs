@@ -199,9 +199,33 @@ modules:
   # Palo Alto Firewall MIB
   paloalto:
     walk:
-    - panSys
+    - panSysSwVersion
+    - panSysHwVersion
+    - panSysSerialNumber
+    - panSysAppVersion
+    - panSysHAState
+    - panSysHAPeerState
+    - panSysHAMode
+    - panSysUrlFilteringDatabase
+    - panSysGlobalProtectClientVersion
+    - panSysUrlFilteringVersion
+    - panSysAvVersion
     - panChassis
-    - panSession
+    - panSessionMax
+    - panSessionActive
+    - panSessionActiveTcp
+    - panSessionActiveUdp
+    - panSessionActiveICMP
+    - panSessionDiscard
+    - panFlowDosRedIcmp
+    - panFlowDosRedIcmp6
+    - panFlowDosRedIp
+    - panFlowDosRedTcp
+    - panFlowDosRedUdp
+    - panFlowDosPfIpspoof
+    - panFlowDosPfTcpsynackdata
+    - panFlowDosPfTcpsyndata
+    - panVsysEntry
     - panMgmt
     - panGlobalProtect
-    - panLogCollector
+    - hrProcessorLoad
