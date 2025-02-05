@@ -211,11 +211,14 @@ modules:
     - panSysUrlFilteringVersion
     - panSysAvVersion
     - panChassis
+    - panSessionUtilization
     - panSessionMax
     - panSessionActive
     - panSessionActiveTcp
     - panSessionActiveUdp
     - panSessionActiveICMP
+    - panSessionActiveSslProxy
+    - panSessionSslProxyUtilization
     - panSessionDiscard
     - panFlowDosRedIcmp
     - panFlowDosRedIcmp6
